@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>曰茶去</title>
+		<style type="text/css">
+			body{
+				width:100%;
+				height:100%;
+				background-image: url("img/qi.PNG");
+				background-repeat:no-repeat;
+				background-position: center 0;
+                background-size: cover;
+       
+			} 
+		   
+			.botton{
+				width:20%;
+				height:10%;
+				position:absolute;
+			    left:70%;
+			    top:70%;
+			}
+			#qi{
+				position:absolute;
+				top:8%;
+				left:36%;
+			}
+			#cbxx{
+				position:absolute;
+				top:9%;
+				left:38%;
+				opacity: 0;
+			}
+			.dipan{
+				position:absolute;
+				top:75%;
+				left:20%;
+			}
+			.shadow1{
+				position: absolute;
+				top:77%;
+				left:23%;
+			}
+			.shadow2{
+				position: absolute;
+				top:77%;
+				left:53%;
+			}
+			.chawan{
+				width:42%;
+				height:28%;
+				position: absolute;
+				top:24%;
+				left:29%;
+			}
+			.tang{
+				width:42%;
+				height:28%;
+				position: absolute;
+				top:25%;
+				left:29%;
+			}
+			#hu{
+				width:10%;
+				height: 12%;
+				position: absolute;
+				top:70%;
+				left:28%;
+				cursor: pointer;
+			}
+			
+			#chaxian{
+				width:18%;
+				position: absolute;
+				top:71%;
+				left:55%;
+			}
+			#jt{
+				width:10%;
+				position:absolute;
+				top:81%;
+				left:58%;
+				opacity: 0;
+				animation: jt 2s ease infinite;
+			}
+			@keyframes jt{
+				0%{opacity: 0;}
+				50%{opacity: 1;}
+				100%{opacity: 0;}
+			}
+			#bigcx{
+				width:28%;
+				position: absolute;
+				top:20%;
+				left:50%;
+				opacity: 0;
+			}
+			a:hover{opacity: 0.5;}
+			#cx{
+				width:28%;
+				position: absolute;
+				top:20%;
+				left:50%;
+				-webkit-animation: cx 2s ease 3,cx1 1s 6s ease;
+				-webkit-animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes cx{
+				50%{transform: translateY(20px);}
+			}
+			@-webkit-keyframes cx1{
+				100%{opacity: 0;}
+			}
+		    #mo{
+		    	width:32%;
+		    	position: absolute;
+		    	top:27%;
+				left:35%;
+				opacity: 0;
+		    }
+		    #mo1{
+		    	width:38%;
+		    	position: absolute;
+		    	top:26%;
+				left:31%;
+				opacity: 0;
+		    }
+		    .momo{
+		    	width:32%;
+		    	position: absolute;
+		    	top:27%;
+				left:35%;
+				-webkit-animation: momo 7s ease; 
+				-webkit-animation-fill-mode: forwards;
+				
+		    }
+		    @-webkit-keyframes momo{
+		    	100%{opacity: 1;}
+		    }
+		    #wenzi1{
+		    	width:85%;
+		    	position: absolute;
+		    	top:88%;
+		    	left:3%;
+		    	animation: wenzi1 5s ease;
+		    }
+		    @keyframes wenzi1{
+				0%{opacity: 0;}
+                100%{opacity: 1;}
+			}
+		    #wenzi2{
+		    	width:85%;
+		    	position: absolute;
+		    	top:98%;
+		    	left:3%;
+		        animation: wenzi2 5s ease;
+		    }
+		    @keyframes wenzi2{
+				0%{opacity: 0;}
+                100%{opacity: 1;}
+			}		
+			#wenzi3{
+		    	width:85%;
+		    	position: absolute;
+		    	top:88%;
+		    	left:3%;
+		    	opacity: 0;
+		    }
+		     #next{
+		    	position: absolute;
+		    	top:80%;
+		    	left:85%;
+		    	opacity: 0;
+		    }
+		    .next1{
+		    	position: absolute;
+		    	top:80%;
+		    	left:85%;
+		        animation: next1 2s ease infinite;
+			}
+			@keyframes next1{
+				0%{opacity: 0;}
+				50%{opacity: 1;}
+				100%{opacity: 0;}
+			}
+		</style>
+	
+	</head>
+	<body>
+		<div>
+			<img id="qi" src="img/qit.png" />
+			<img class="dipan" src="img/dipan.png" />
+			<img class="shadow1" src="img/shadow.png" />
+			<img class="shadow2" src="img/shadow.png" />
+			<img class="chawan" src="img/wan.png" />
+			<img class="tang" src="img/tang.png" />
+			<img id="jt" src="img/jt.png"/>
+			<img id="mo" src="img/mo.png" />
+			<img id="mo1" src="img/mo1.png" />
+			<img id="wenzi1" src="img/wenzi1.png" />
+			<img id="wenzi2" src="img/wenzi2.png" />
+			<img id="wenzi3" src="img/wenzi3.png" />
+			<img id="cbxx" src="img/cbxx.png" />
+			<a href= "doucha.html" target="_self" title="斗茶"><img id="next" src="img/next.png" /></a>
+		</div>
+		<div >
+			<img id="hu" src="img/hu.png"  />
+			<img id="chaxian" src="img/chaxian.png" />
+		</div>
+		<div>
+			<img id="bigcx" src="img/bigcx.png" />
+		</div>
+		
+		
+	</body>
+	
+    <script type="text/javascript">
+    window.onload = () => {
+        //获取拖拽实验对象
+        let el=document.getElementById("hu");
+        //在该对象上绑定鼠标点击事件
+        el.onmousedown = (e) => {
+            //鼠标按下，计算鼠标触点距离元素左侧和顶部的距离
+            let disX = e.clientX - el.offsetLeft;
+            let disY = e.clientY - el.offsetTop;
+            document.onmousemove = function (e) {
+              //计算需要移动的距离
+              let tX = e.clientX - disX;
+              let tY = e.clientY - disY;
+              //移动当前元素
+              if (tX >= 0 && tX <= window.innerWidth - el.offsetWidth) {
+                el.style.left = tX + 'px';
+              } 
+              if (tY >= 0 && tY <= window.innerHeight - el.offsetHeight) {
+                el.style.top = tY + 'px';
+              } 
+            };
+            //鼠标松开时，注销鼠标事件，停止元素拖拽。
+            document.onmouseup = function (e) {
+                document.onmousemove = null;
+                document.onmouseup = null;
+            };
+        }
+          let el1=document.getElementById("chaxian");
+        //在该对象上绑定鼠标点击事件
+          el1.onmousedown = (e) => {
+            //鼠标按下，计算鼠标触点距离元素左侧和顶部的距离
+            let disX1 = e.clientX - el1.offsetLeft;
+            let disY1 = e.clientY - el1.offsetTop;
+            document.onmousemove = function (e) {
+              //计算需要移动的距离
+              let tX1 = e.clientX - disX1;
+              let tY1 = e.clientY - disY1;
+              //移动当前元素
+              if (tX1 >= 0 && tX1 <= window.innerWidth - el1.offsetWidth) {
+                el1.style.left = tX1 + 'px';
+              } 
+              if (tY1 >= 0 && tY1 <= window.innerHeight - el1.offsetHeight) {
+                el1.style.top = tY1 + 'px';
+              } 
+            };
+            //鼠标松开时，注销鼠标事件，停止元素拖拽。
+            document.onmouseup = function (e) {
+                document.onmousemove = null;
+                document.onmouseup = null;
+                //alert("实现动画");
+                document.getElementById("chaxian").style.opacity=0;
+                var a = document.getElementById("bigcx");
+                a.style.opacity=1;
+                a.id="cx";     
+                document.getElementById("mo").className="momo";
+            };
+        }   
+        var o = document.getElementById("bigcx");
+        o.addEventListener("webkitAnimationEnd",function(){
+        	//alert("茶百戏");
+        	document.getElementById("wenzi1").style.opacity=0;
+        	document.getElementById("wenzi2").style.opacity=0;
+        	document.getElementById("wenzi3").style.opacity=1;
+        	document.getElementById("qi").style.opacity=0;
+        	document.getElementById("cbxx").style.opacity=1;
+        	document.getElementById("hu").style.opacity=0;
+        	document.getElementById("jt").style.animation="0s";
+        	document.getElementById("mo").style.animation="0s";
+            document.getElementById("mo1").style.opacity=1;
+            document.getElementById("next").className="next1";
+        });
+    }
+    
+    </script>
+ 
+</html>

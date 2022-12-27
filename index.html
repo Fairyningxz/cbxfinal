@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>曰茶去</title>
+		<style type="text/css">
+			body{
+				width:100%;
+				height:100%;
+				background-image: url("img/liubj.png");
+				background-repeat:no-repeat;
+				background-position: center 0;
+                background-size: cover;
+       
+			} 
+			#hu{
+				width:10%;
+				height: 12%;
+				position: absolute;
+				top:71%;
+				left:33%;
+				cursor: pointer;
+			}
+			#chaxian{
+				width:18%;
+				position: absolute;
+				top:72%;
+				left:54%;
+			}
+			#jt{
+				width:10%;
+				position:absolute;
+				top:82%;
+				left:34%;
+				opacity: 0;
+				animation: jt 2s ease infinite;
+			}
+			@keyframes jt{
+				0%{opacity: 0;}
+				50%{opacity: 1;}
+				100%{opacity: 0;}
+			}
+			#jt1{
+				width:10%;
+				position:absolute;
+				top:82%;
+				left:57%;
+				opacity: 0;
+			}
+			.jt1{
+				width:10%;
+				position:absolute;
+				top:82%;
+				left:57%;
+				opacity: 0;
+				animation: jt1 2s ease infinite;
+			}
+			@keyframes jt1{
+				0%{opacity: 0;}
+				50%{opacity: 1;}
+				100%{opacity: 0;}
+			}
+			#daoshui{
+				width:40%;
+				position: absolute;
+				top:20%;
+				left:5%;
+				opacity: 0;
+				
+			}
+			#shui{
+				width:36%;
+		    	position: absolute;
+		    	top:30%;
+				left:34%;
+				opacity: 0;
+			}
+			.shui1{
+				width:36%;
+		    	position: absolute;
+		    	top:30%;
+				left:34%;
+				-webkit-animation: shui1 4s ease;
+				-webkit-animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes shui1{
+				50%{opacity: 1;}
+				100%{opacity: 0.4;}
+			}
+			#bigcx{
+				width:28%;
+				position: absolute;
+				top:20%;
+				left:50%;
+				opacity: 0;
+			}
+			#cx{
+				width:28%;
+				position: absolute;
+				top:20%;
+				left:50%;
+				-webkit-animation: cx 3s ease 3,cx1 1s 6s ease;
+				-webkit-animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes cx{
+				25%{
+					transform: translateX(-80px);
+				}
+				50%{
+					transform:translateY(80px);
+				}
+				75%{
+					transform: translateX(40px);
+				}
+				100%{
+					transform: translateY(-40px);
+				}
+			}
+			@-webkit-keyframes cx1{
+				100%{opacity: 0;}
+			}
+			#tang1{
+				width:38%;
+				position:absolute;
+				top:27%;
+				left:32%;
+				opacity: 0;
+			}
+			#tang2{
+				width:38%;
+				position:absolute;
+				top:27%;
+				left:32%;
+				opacity: 0;
+			}
+			.tang22{
+				width:38%;
+				position:absolute;
+				top:27%;
+				left:32%;
+				-webkit-animation: momo 10s ease; 
+				-webkit-animation-fill-mode: forwards;
+				
+		    }
+		    @-webkit-keyframes momo{
+		    	100%{opacity: 1;}
+		    }
+		    #tang{
+				width:44%;
+				position: absolute;
+				top:26%;
+				left:29%;
+				opacity: 0;
+			}
+			.tangtang{
+				width:44%;
+				position: absolute;
+				top:26%;
+				left:29%;
+				-webkit-animation: tangtang 3s ease; 
+				-webkit-animation-fill-mode: forwards;
+				
+		    }
+		    @-webkit-keyframes tangtang{
+		    	100%{opacity: 1;}
+		    }
+		    #next{
+		    	position: absolute;
+		    	top:80%;
+		    	left:85%;
+		    	opacity: 0;
+		    }
+		    .next1{
+		    	position: absolute;
+		    	top:80%;
+		    	left:85%;
+		        animation: next1 2s ease infinite;
+			}
+			@keyframes next1{
+				0%{opacity: 0;}
+				50%{opacity: 1;}
+				100%{opacity: 0;}
+			}
+			#wz1{
+				width:85%;
+		    	position: absolute;
+		    	top:88%;
+		    	left:3%;
+		    	animation: wenzi1 5s ease;
+		    }
+		    @keyframes wenzi1{
+				0%{opacity: 0;}
+                100%{opacity: 1;}
+			}
+			#wz2{
+				width:85%;
+		    	position: absolute;
+		    	top:98%;
+		    	left:3%;
+		        animation: wenzi2 5s ease;
+		    }
+		    @keyframes wenzi2{
+				0%{opacity: 0;}
+                100%{opacity: 1;}
+			}		
+			#liu{
+				position:absolute;
+				top:9%;
+				left:39%;
+			}
+			#wz3{
+				width:85%;
+		    	position: absolute;
+		    	top:90%;
+		    	left:3%;
+		    	opacity: 0;
+		    }
+		    #wenzi2{
+				width:85%;
+		    	position: absolute;
+		    	top:98%;
+		    	left:3%;
+		        opacity: 0;
+		    }
+		</style>	
+	</head>
+	<body>
+		<div>
+			<img id="shui" src="img/shui.png" />
+			<img id="jt" src="img/jt.png"/>
+			<img id="jt1" src="img/jt.png" />
+			<img id="tang2" src="img/tang2.png" />
+			<img id="tang1" src="img/tang1.png" />
+			<img id="tang" src="img/tang.png" />
+			<img id="wz1" src="img/wz1.png" />
+			<img id="wz2" src="img/wz2.png" />
+			<img id="wz3" src="img/wz3.png" />
+			<img id="wenzi2" src="img/wenzi2.png" />
+			<img id="liu" src="img/liu.png" />
+		</div>
+		<div>
+			<img id="hu" src="img/hu.png"  />
+			<img id="chaxian" src="img/chaxian.png" />
+		</div>
+		<div>
+			<img id="daoshui" src="img/daoshui.png" />
+			<img id="bigcx" src="img/bigcx.png" />
+			<a href= "qi.html" target="_self" title="斗茶"><img id="next" src="img/next.png" /></a>
+		</div>
+	</body>
+	 <script type="text/javascript">
+    window.onload = () => {
+        //获取拖拽实验对象
+        let el=document.getElementById("hu");
+        //在该对象上绑定鼠标点击事件
+        el.onmousedown = (e) => {
+            //鼠标按下，计算鼠标触点距离元素左侧和顶部的距离
+            let disX = e.clientX - el.offsetLeft;
+            let disY = e.clientY - el.offsetTop;
+            document.onmousemove = function (e) {
+              //计算需要移动的距离
+              let tX = e.clientX - disX;
+              let tY = e.clientY - disY;
+              //移动当前元素
+              if (tX >= 0 && tX <= window.innerWidth - el.offsetWidth) {
+                el.style.left = tX + 'px';
+              } 
+              if (tY >= 0 && tY <= window.innerHeight - el.offsetHeight) {
+                el.style.top = tY + 'px';
+              } 
+            };
+            //鼠标松开时，注销鼠标事件，停止元素拖拽。
+            document.onmouseup = function (e) {
+                document.onmousemove = null;
+                document.onmouseup = null;
+                //alert("实现动画");
+                document.getElementById("hu").style.opacity=0;
+                document.getElementById("daoshui").style.opacity=1;
+                document.getElementById('shui').className="shui1";
+            };
+        }
+         let el1=document.getElementById("chaxian");
+        //在该对象上绑定鼠标点击事件
+          el1.onmousedown = (e) => {
+            //鼠标按下，计算鼠标触点距离元素左侧和顶部的距离
+            let disX1 = e.clientX - el1.offsetLeft;
+            let disY1 = e.clientY - el1.offsetTop;
+            document.onmousemove = function (e) {
+              //计算需要移动的距离
+              let tX1 = e.clientX - disX1;
+              let tY1 = e.clientY - disY1;
+              //移动当前元素
+              if (tX1 >= 0 && tX1 <= window.innerWidth - el1.offsetWidth) {
+                el1.style.left = tX1 + 'px';
+              } 
+              if (tY1 >= 0 && tY1 <= window.innerHeight - el1.offsetHeight) {
+                el1.style.top = tY1 + 'px';
+              } 
+            };
+            //鼠标松开时，注销鼠标事件，停止元素拖拽。
+            document.onmouseup = function (e) {
+                document.onmousemove = null;
+                document.onmouseup = null;
+                //alert("实现动画");
+                document.getElementById("chaxian").style.opacity=0;
+                var a = document.getElementById("bigcx");
+                a.style.opacity=1;
+                a.id="cx"; 
+                document.getElementById("tang2").className="tang22";
+            };
+        }  
+        var o = document.getElementById("shui");
+        o.addEventListener("webkitAnimationEnd",function(){
+        	document.getElementById("daoshui").style.opacity=0;
+        	document.getElementById("jt").style.animation="0s";
+        	document.getElementById("jt1").className="jt1";
+        	document.getElementById("wz2").style.opacity=0;
+        	document.getElementById("wz1").style.opacity=0;
+        	document.getElementById("wenzi2").style.opacity=1;
+        	document.getElementById("wz3").style.opacity=1;
+        	
+        });
+        var a = document.getElementById("bigcx");
+        a.addEventListener("webkitAnimationEnd",function(){
+        	//alert("cbhjdsc");
+        	document.getElementById("tang").className="tangtang";
+        });
+        var b = document.getElementById("tang");
+        b.addEventListener("webkitAnimationEnd",function(){
+        	//alert("cbhjdsc");
+        	document.getElementById("jt1").style.animation="0s";
+        	document.getElementById("next").className="next1";
+        });
+    }
+      
+     </script>
+ 
+</html>

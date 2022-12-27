@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>曰茶去</title>
+		<style type="text/css">
+			body{
+				width:100%;
+				height:100%;
+				background-image: url("img/share1.png");
+				background-repeat:no-repeat;
+				background-position: center 0;
+                background-size: cover;
+			}
+			 #share{
+				position:absolute;
+			    left:85%;
+			    top:7%;
+			}
+			#change{
+				position:absolute;
+				top:60%;
+				left:7%;
+			}
+			.wenzi{
+				position:absolute;
+				top:70%;
+				left:20%;
+				animation: wenzi 2s linear 1;
+			}
+			@keyframes wenzi{
+				0%{
+					transform: translateX(-50%);
+				}
+				100%{
+					transform: translateX(20%);
+				}
+			}
+			a:hover{
+				opacity: 0.5;
+			}
+			#fxwz{
+				position: absolute;
+				top:93%;
+				left:17%;
+			}
+			#fx{
+				width:60%;
+				position: absolute;
+				top:82%;
+				left:19%;
+			}
+		</style>
+		
+	</head>
+	<body>
+		    <div >
+		    	<img id="fxwz" src="img/fxwz.png" />
+		    	<img id="fx" src="img/fx1.png" />
+		    </div>
+		    <div>
+		    	<a  target="_self" title="茶百戏" ><img id="share" src="img/share.png "></a>
+		    </div>
+			<div>
+		    	<a  target="_self" title="更换茶百戏图案" ><img id="change" src="img/change.png " onclick="change()" ></a>
+		    </div>
+	
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var a=1;
+			document.getElementById("change").onclick=function(){
+				//alert("换页面");
+				a++;
+				document.body.style.backgroundImage="url('img/share"+a+".png')";
+				document.getElementById("fx").src="img/fx"+a+".png";
+				if(a>=9){
+					a=0;
+				}
+			}
+		}
+			
+		</script>
+</html>
